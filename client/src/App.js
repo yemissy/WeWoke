@@ -12,7 +12,6 @@ import { createPetitions } from './Services/petitions';
 import LandingPage from './Components/LandingPage';
 import GuestScreen from './Components/GuestScreen';
 import MemberActivityScreen  from './Components/MemberActivityScreen'
-import OtherLink from './Components/OtherLink';
 import NewPetitionForm from './Components/NewPetitionForm';
 
 
@@ -43,7 +42,6 @@ class App extends Component {
           password: ''
       },
       loggedIn: false,
-      loggedOut: true,
       redirectToMember: false,
       redirectToGuest: false,
       petitionData: {
@@ -94,13 +92,11 @@ class App extends Component {
     localStorage.setItem('token', data.jwt);
     this.setState({
       loggedIn: true,
-      loggedOut: false,
       redirectToMember:true,
       login: {
         password:data
       }
     })
-
   }
 
   async componentDidMount(){
@@ -177,7 +173,7 @@ class App extends Component {
               onPetitionInfoChange={this.onPetitionInfoChange}
               handlePetitionSubmit={this.handlePetitionSubmit}
               petitionData={this.state.petitionData}
-              loggedOut={this.state.loggedOut}
+              loggedIn={this.state.loggedIn}
               /> }
             />
             <Route path='/memberhome' render ={()=> <MemberActivityScreen
@@ -188,6 +184,7 @@ class App extends Component {
               handlePetitionSubmit={this.handlePetitionSubmit}
               petitionData={this.state.petitionData}/> }
             />
+
         </div>
 
       </Router>

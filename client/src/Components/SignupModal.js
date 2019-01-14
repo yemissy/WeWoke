@@ -7,18 +7,18 @@ import LoginForm from './LoginForm';
 export default function SignUpModal(props){
   return(
     <div id='Signupmodal'>
-      <Modal trigger={<Button>Create Petition</Button>} closeIcon id="secondModal">
+      <Modal trigger={<Button color='green'>Create Petition</Button>} closeIcon id="secondModal">
         <Modal.Content scrolling>
           <p>
             You need to sign up or log in to create a petition
           </p>
             <SignUpForm
               onChange={props.onChange}
-              onLoginChange={props.onLoginChange}
               values={props.values}
               handleSignup={props.handleSignup}
-              continue={props.continue}/>
+            />
             <LoginForm id="secLogin"
+              onLoginChange={props.onLoginChange}
               handleLogin={props.handleLogin}
               value={props.value}
             />

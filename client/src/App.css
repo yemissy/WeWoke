@@ -1,12 +1,15 @@
 .App {
   text-align: center;
+  background: url('./Images/bodyBackground5.png');
+  background-size: cover;
 }
 .signup{
   /* border: solid blue; */
   width: 600px;
-  position: absolute;
-  left: 90px;
+  position: relative;
+  left:20%;
   top:30%;
+  z-index: 1;
 }
 .signupbtn{
   margin-left: 30px
@@ -14,10 +17,13 @@
 #login{
   /* border: solid blue; */
   width:400px;
-  position: absolute;
-  right:10%;
+  position: relative;
+  left:22.6%;
   top:30%;
+  z-index: 1;
+  /* background: white; */
 }
+
 .continue{
   position: absolute;
   top:80%;
@@ -38,29 +44,54 @@
 /*  Petition Styling*/
 .petition{
   /* border: solid blue; */
-  width: 500px;
+  width: 670px;
   position: absolute;
-  top:40px;
-  right:15%;
+  top:80px;
+  right:3%;
+  background-color: white;
 }
 
 /*  GuestSceen styling*/
 .sidebar{
   /* border: solid black; */
   width: 150px;
-  margin-top: 40px;
+  height: 100vh;
+  background-color: yellow;
+  position: absolute;
+  top: 0px;
 }
 .pointing{
   text-align: left;
+}
 
-}
-.divider{
-  margin: 30%;
-}
 .petitionContent{
-  height: 600px;
+  width: 670px;
+  height: 400px;
   overflow: scroll;
 }
+.GuestScreen{
+  height: 100vh;
+  /* border:solid blue; */
+}
+#guestContainer{
+  height: 300px;
+  width: 90%;
+  height:100%;
+  margin-left: 10%;
+  background: url('./Images/childImage6.jpg');
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.9;
+}
+#guestContainer:hover{
+  opacity: 1;
+}
+#secauth{
+  position: absolute;
+  left: 85%;
+  top:10px;
+}
+
  /* Article styling*/
 .articles{
   /* border:solid blue; */
@@ -69,8 +100,12 @@
   height: 650px;
   overflow: scroll;
   position: absolute;
-  top: 120px;
+  top: 80px;
   left: 15%;
+  background-color: white;
+}
+.articles:hover{
+  opacity: 1;
 }
 .meta{
   float:right;
@@ -111,8 +146,8 @@
 #Signupmodal{
   /* border:solid red; */
   position: absolute;
-  top:40px;
-  right: 39%;
+  top:10px;
+  left:15%;
 }
 #secondModal{
   width: 90%;
@@ -123,9 +158,92 @@
   top: 20px;
   right: 100px;
 }
-/*  SMALL is the create petition button*/
-.createPetition{
-  border: solid red;
+#continueBtn{
+  /* border: solid red; */
+  position: absolute;
+  top: 68%;
+  right:29.2%;
+  z-index: 1;
+}
+#welcomegreeting{
+  /* border: solid red; */
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  z-index: 1;
+  left: 33%;
+  color:white;
+}
+#landingpage{
+  /* border:solid blue; */
+  height: 100vh;
+  display: flex;
+}
+
+.one{
+  width: 100%;
+  height: 300px;
+  /* border: solid red; */
+  background: url('./Images/childImage1.jpg');
+  background-size:contain;
+  opacity: 1;
+  position: absolute;
+  bottom:100%;
+  right:71.4%;
+}
+
+
+.two{
+  width: 600px;
+  height: 300px;
+  /* border: solid green; */
+  background: url('./Images/childImage2.jpg')fixed;
+  background-size:contain;
+  position: absolute;
+  right:25px;
+  top: -175%;
+}
+.three{
+  width: 845px;
+  height: 493px;
+  border:solid black;
+  background: url('./Images/childImage4.jpg')fixed;
+  background-size:contain;
+  position: relative;
+  top: 29%;
+  left:100%;
+
+}
+
+.four{
+  width: 610px;
+  height: 209px;
+  background: url('./Images/childImage5.jpeg');
+  background-size:contain;
+  position: relative;
+  right: 135%;
+  top: 73%;
+}
+.four:hover{
+  opacity: 0.6;
+}
+
+.holder{
+  border: solid black;
+  height: 400px;
+  width: 70vw;
+  margin-left: 15%;
+  margin-top: 15%;
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  opacity: 0.8;
+}
+.holder:hover{
+  opacity: 1;
+}
+h4{
+  color:white;
 }
 @keyframes App-logo-spin {
   from {

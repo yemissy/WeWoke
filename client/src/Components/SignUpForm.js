@@ -6,6 +6,7 @@ import { Form, Input, Button } from 'semantic-ui-react';
 export default function SignUpForm(props){
   return(
     <div className='signup'>
+      <h2>Become a member</h2>
       <Form onSubmit ={props.handleSignup}>
         <Form.Group inline>
           <Form.Field  required>
@@ -15,7 +16,7 @@ export default function SignUpForm(props){
               name = "firstName"
               onChange = {props.onChange}
               value = {props.values.firstName}
-              
+
             />
           </Form.Field>
           <Form.Field   required>

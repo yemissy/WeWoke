@@ -5,6 +5,7 @@ import { Form, Input, Button } from 'semantic-ui-react';
 export default function LoginForm(props){
   return(
     <div id='login'>
+      <h2>Already a member ? log in</h2>
       <Form onSubmit={props.handleLogin}>
         <Form.Group widths='equal'>
           <Form.Field inline required>

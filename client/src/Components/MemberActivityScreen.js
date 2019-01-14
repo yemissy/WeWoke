@@ -36,8 +36,6 @@ class MemberActivityScreen extends Component{
     return(
       <div>
         <SidebarMenu
-          activeLink={this.props.handleActiveLink}
-          linkactive={this.props.linkActive}
           />
         <Item.Image src={profile}  className='profile' avatar/>
         <Articles articles={this.props.thearticles}/>

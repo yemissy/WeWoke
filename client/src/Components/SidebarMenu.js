@@ -8,7 +8,7 @@ export default function SidebarMenu(props){
       <Icon name="content"/>
       <Menu pointing secondary vertical>
         <Link to ='/guesthome'>
-          <Menu.Item name ="Home" />
+          <Menu.Item name ="Home"/>
         </Link>
         <Link to ='/memberhome' >
           <Menu.Item name ="Activity Feed" active={props.linkActive}/>
@@ -23,7 +23,7 @@ export default function SidebarMenu(props){
             <Menu.Item name ="Archive"/>
           </Link>
           <Link to ='/'>
-            <Menu.Item name ="Logout"/>
+            {/* <Menu.Item name ="Logout"/> */}
           </Link>
       </Menu>
     </div>

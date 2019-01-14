@@ -9,15 +9,12 @@ export default function PetitionScreen(props){
     <div className="petition">
       <Dropdown
         options={props.categories.map(cat => (
-        <p key={cat.id}>{cat.type}</p>
+        <h4 key={cat.id}>{cat.type}</h4>
       ))}
       clearable
       placeholder="category"
       selection
       />
-      {/* <Button content="Create Petition" />
-      {props.userLoggedIn ?( <NewPetitionForm />) : alert('Please log in')}
-      <NewPetitionForm onActionClick={() => props.userLoggedIn ? alert('please log in'):}/> */}
       <hr></hr>
       <div className="petitionContent">
         <Item.Group divided>

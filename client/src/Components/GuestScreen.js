@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Divider, Button } from 'semantic-ui-react';
+import { Divider, Button, Modal} from 'semantic-ui-react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
@@ -9,7 +9,7 @@ import PetitionScreen from './PetitionScreen';
 import Articles from './Articles';
 import SignupModal from './SignupModal';
 import NewPetitionForm from './NewPetitionForm';
-// import OtherLink from './OtherLink';
+
 
 async function getPet(){
   const result = await axios.get('/petitions');
@@ -42,46 +42,55 @@ class GuestSceen extends Component {
       ],
       open: true
     }
-    this.validateCreatePetition = this.validateCreatePetition.bind(this)
+    // this.handleClick = this.handleClick.bind(this);
   }
-    validateCreatePetition(currentView){
-       currentView = this.props.currentView;
-       console.log('I am being called')
-      if(currentView === 'memberhome'){
-        this.setState({
-          open: false,
-        })
-      }
-    }
 
+  // handleClick(e){
+  //   console.log('i am getting clicked');
+  //   if(this.props.loggedIn ===false){
+  //     return (<SignupModal />)
+  //   }
+  //   else{
+  //     alert('you\'re already loggedin');
+  //   }
+  // }
 
   render(){
     return(
-      <div>
-        <SidebarMenu linkActive={this.props.linkActive}/>
-        <Articles articles={this.props.thearticles}/>
+      <div className='GuestScreen'>
         <Divider vertical></Divider>
-        <PetitionScreen
-          categories={this.state.categories}
-          petitions={this.props.petitions}
-        />
-        {(this.props.loggedOut)?
-         <SignupModal
+          <div id='guestContainer'>
+            <Articles articles={this.props.thearticles}/>
+            <PetitionScreen
+              categories={this.state.categories}
+              petitions={this.props.petitions}
+            />
+        </div>
+        <SidebarMenu linkActive={this.props.linkActive}/>
+        {(this.props.loggedIn===false)?
+          <div>
+          <SignupModal
           onChange={this.props.onChange}
           onLoginChange={this.props.onLoginChange}
           values={this.props.values}
           handleSignup={this.props.handleSignup}
           handleLogin={this.props.handleLogin}
           value={this.props.value}
-          continue={this.props.continue}
-          />:
+          />
+          <div  id='secauth'>
+            <Button className='secauthbtns' color='blue' >Signup</Button>
+            <Button className='secauthbtns' color='green'>Login</Button>
+          </div>
+        </div> :
+        <div>
+          <Button size='tiny' id='logout' color='black'>Logout</Button>
           <NewPetitionForm
           onChange={this.props.onPetitionInfoChange}
           newPetition={this.props.handlePetitionSubmit}
           data={this.props.petitionData}
           />
+        </div>
         }
-        {/* <Button /> */}
       </div>
     );
   }

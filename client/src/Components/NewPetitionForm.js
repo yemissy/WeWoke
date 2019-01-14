@@ -1,14 +1,12 @@
 import React from 'react';
-import { Form, Input, Button, Modal } from 'semantic-ui-react';
+import { Form, Input, Button, Modal, TextArea } from 'semantic-ui-react';
 
 
-// import CreatePetitionBtn from './CreatePetitionBtn';
-// import OtherLink from './OtherLink';
 
 export default function PetitionForm(props){
   return(
     <div id='modal'>
-      <Modal trigger={<Button>Create Petition</Button>} closeIcon>
+      <Modal trigger={<Button color='green'>Create Petition</Button>} closeIcon>
         <Modal.Content>
           <p>
             Please fill in the required information
@@ -33,11 +31,12 @@ export default function PetitionForm(props){
             <Form.Group inline>
               <Form.Field required>
                 <label>Detail</label>
-                <Input
-                placeholder="Detail"
-                name='detail'
-                value= {props.data.detail}
-                onChange={props.onChange}/>
+                <TextArea
+                 name='detail'
+                 placeholder="Detail"
+                 value= {props.data.detail}
+                 onChange={props.onChange}
+               />
               </Form.Field>
               <Form.Field >
                 <label>Organizer</label>

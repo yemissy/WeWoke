@@ -12,7 +12,7 @@ export default function Articles(props){
             <Item.Content >
               <Item.Header>Title:{article.title}</Item.Header>
               <Item.Description>{article.story}</Item.Description>
-              <Item.Extra>Source:{article.source}</Item.Extra>
+              <Item.Extra>Source:<a>{article.source}</a></Item.Extra>
               <Item.Extra>Writer:{article.writer}</Item.Extra>
               <Item.Meta>
                 <Icon name='like'/> 10 likes
