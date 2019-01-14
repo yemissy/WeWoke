@@ -17,24 +17,6 @@ export default class LandingPage extends React.Component{
     }
   }
 
-  // <div id='welcomegreeting'>
-  //   <h1>Welcome</h1>
-  //   <h3>WeWoke</h3>
-  //   <h2>Are You Woke ?</h2>
-  // </div>
-  // <SignUpForm
-  //   onChange={this.props.onChange}
-  //   values ={this.props.values}
-  //   handleSignup={this.props.handleSignup}
-  //   update={this.props.updPg}
-  // />
-  // <Divider vertical> Or </Divider>
-  // <LoginForm
-  //   onLoginChange={this.props.onLoginChange}
-  //   value ={this.props.value}
-  //   handleLogin ={this.props.handleLogin}/>
-  //   <Button onClick={this.props.handleContinue} id="continueBtn" color='blue'>Continue</Button>
-
 
   render(){
     if(this.props.guestRedirect) return (<Redirect to='/guesthome' />)
@@ -53,16 +35,14 @@ export default class LandingPage extends React.Component{
           onChange={this.props.onChange}
           values ={this.props.values}
           handleSignup={this.props.handleSignup}
-          update={this.props.updPg}
+          // update={this.props.updPg}
         />
-      {/* </div>
-      <div className='holder'> */}
+
         <LoginForm
           onLoginChange={this.props.onLoginChange}
           value ={this.props.value}
           handleLogin ={this.props.handleLogin}/>
           <Button onClick={this.props.handleContinue} id="continueBtn" color='blue'>Continue</Button>
-      {/* </div> */}
         <Divider vertical>Or</Divider>
         <div id='opacity'>
         <div className='four'>

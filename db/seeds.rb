@@ -36,16 +36,16 @@ Member.destroy_all
       password: 'abcabc'
     }
     ])
-    petitions = Petition.create!([
-      {
-        title: 'money for school',
-        category: 'fundraising',
-        detail: 'We are building schools for kids in Tanzania',
-        signatureCount: 0,
-        Organizers_Name: 'Missy',
-        author_id: 1
-      }
-      ]);
+    # petitions = Petition.create!([
+    #   {
+    #     title: 'money for school',
+    #     category: 'fundraising',
+    #     detail: 'We are building schools for kids in Tanzania',
+    #     signatureCount: 0,
+    #     Organizers_Name: 'Missy',
+    #     author_id: 1
+    #   }
+    #   ]);
       resp = HTTParty.get('https://newsapi.org/v2/everything?q=blacklivesmatter&apiKey=72e67456d4fb4850837e259879ad46f5', :verify => false).parsed_response
 
       resp["articles"].each do |article|
