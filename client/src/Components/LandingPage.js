@@ -28,8 +28,6 @@ export default class LandingPage extends React.Component{
 
         </div>
         <div id='welcomegreeting'>
-          <h1>Welcome</h1>
-          <h1>WeWoke</h1>
           <h1>Are you Woke ?</h1>
         </div>
         <SignUpForm
@@ -37,8 +35,6 @@ export default class LandingPage extends React.Component{
           values ={this.props.values}
           handleSignup={this.props.handleSignup}
         />
-
-
         <LoginForm
           onLoginChange={this.props.onLoginChange}
           value ={this.props.value}

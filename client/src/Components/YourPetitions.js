@@ -11,7 +11,6 @@ import supportcategory from '../Images/supportcategory2.jpeg';
 export default function YouCreated(props){
   return(
     <div id='yourpetionsscreen'>
-      {/* <div id='yourPettitionnh1'><h1>These Are The Petitions you have created</h1></div> */}
       <div id='petitionContainer'>
         <Item.Group>
           {props.yourpetitions.map(thePetition => (

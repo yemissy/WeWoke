@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Divider, Image, Button, Item } from 'semantic-ui-react';
-// import { createPetitions } from '../Services/petitions';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
 import profile from '../Images/profilepic1.jpg'
@@ -38,7 +37,7 @@ class MemberActivityScreen extends Component{
         return (<Redirect to="/" />)
       }
     return(
-      <div>
+      <div id='memberActivity'>
         <SidebarMenu
           />
         <Item.Image src={profile}  className='profile' avatar/>

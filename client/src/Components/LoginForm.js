@@ -28,6 +28,7 @@ export default function LoginForm(props){
           </Form.Field>
         </Form.Group>
         <Button type="submit" color='blue'>Login</Button>
+        <h4>Click continue to continue as a guest user</h4>
       </Form>
     </div>
   )

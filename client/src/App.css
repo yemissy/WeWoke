@@ -2,9 +2,9 @@
   text-align: center;
   background: url('./Images/bodyBackground5.png');
   background-size: cover;
+  opacity: 0.7;
 }
 .signup{
-  /* border: solid blue; */
   width: 600px;
   position: relative;
   left:20%;
@@ -15,13 +15,11 @@
   margin-left: 30px
 }
 #login{
-  /* border: solid blue; */
   width:400px;
   position: relative;
   left:22.6%;
   top:30%;
   z-index: 1;
-  /* background: white; */
 }
 
 .continue{
@@ -33,7 +31,6 @@
 .equal{
   width: 450px;
   padding: 20px;
-  /* border: solid black; */
   flex-wrap: wrap;
   margin-left: 30%;
 }
@@ -43,7 +40,6 @@
 
 /*  Petition Styling*/
 .petition{
-  /* border: solid blue; */
   width: 670px;
   position: absolute;
   top:80px;
@@ -53,7 +49,6 @@
 
 /*  GuestSceen styling*/
 .sidebar{
-  /* border: solid black; */
   width: 150px;
   height: 100vh;
   background-color: yellow;
@@ -71,7 +66,6 @@
 }
 .GuestScreen{
   height: 100vh;
-  /* border:solid blue; */
 }
 #guestContainer{
   height: 300px;
@@ -94,7 +88,6 @@
 
  /* Article styling*/
 .articles{
-  /* border:solid blue; */
   text-align: left;
   width: 500px;
   height: 650px;
@@ -104,22 +97,23 @@
   left: 15%;
   background-color: white;
 }
-.articles:hover{
-  opacity: 1;
-}
+
 .meta{
   float:right;
 }
 
 /* Memberhome styling */
+#memberActivity{
+  height: 100vh;
+}
 .activity{
-  /* border:solid blue; */
-  width: 500px;
+  width: 700px;
   position: absolute;
-  top: 120px;
-  right: 15%;
+  top: 80px;
+  right: 20px;
   height: 650px;
   overflow: scroll;
+  background-color: white;
 }
 .logout{
   margin-left: 60%;
@@ -138,10 +132,9 @@
   border-radius: 50%;
 }
 #modal{
-  /* border:solid blue; */
   position: absolute;
-  top:60px;
-  right:39%;
+  top:10px;
+  right:75%;
 }
 #Signupmodal{
   /* border:solid red; */
@@ -166,16 +159,17 @@
   z-index: 1;
 }
 #welcomegreeting{
-  /* border: solid red; */
   width: 500px;
-  height: 200px;
+  height: 60px;
   position: absolute;
   z-index: 1;
+  top:40px;
   left: 33%;
-  color:white;
+  color:yellow;
+  background-color: black;
+  border-radius: 10px;
 }
 #landingpage{
-  /* border:solid blue; */
   height: 100vh;
   display: flex;
 }
@@ -183,7 +177,6 @@
 .one{
   width: 100%;
   height: 300px;
-  /* border: solid red; */
   background: url('./Images/childImage1.jpg');
   background-size:contain;
   opacity: 1;
@@ -191,12 +184,9 @@
   bottom:100%;
   right:71.4%;
 }
-
-
 .two{
   width: 600px;
   height: 300px;
-  /* border: solid green; */
   background: url('./Images/childImage2.jpg')fixed;
   background-size:contain;
   position: absolute;
@@ -285,7 +275,6 @@
   left: 64%;
 }
 #petlabel{
-  /* border: solid red; */
   width:400px;
   position: relative;
   bottom: 280px;
@@ -293,7 +282,6 @@
 }
 #petitionshare{
   width: 400px;
-  /* border: solid red; */
   position: relative;
   bottom: 100px;
   left: 30%;
