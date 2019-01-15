@@ -35,7 +35,6 @@ export default class LandingPage extends React.Component{
           onChange={this.props.onChange}
           values ={this.props.values}
           handleSignup={this.props.handleSignup}
-          // update={this.props.updPg}
         />
 
         <LoginForm
