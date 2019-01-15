@@ -26,7 +26,7 @@ class PetitionsController < ApplicationController
   end
 
  # Get current_member/post
-  def petitionsIcreated
+  def mypetitions
     @petitions = current_member.authored_petitions
 
     render json: @petitions

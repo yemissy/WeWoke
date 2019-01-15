@@ -242,8 +242,56 @@
 .holder:hover{
   opacity: 1;
 }
-h4{
-  color:white;
+#yourPettitionnh1{
+  border: solid green;
+  width: 600px;
+  /* height: 150px; */
+  margin-left: 33%;
+}
+#petitionContainer{
+  background-color: white;
+  border:solid black;
+  width: 80vw;
+  height:45vw;
+  margin-left: 16%;
+  margin-top: 65px;
+  overflow: scroll;
+}
+
+#coverimg{
+  width: 450px;
+  height: 250px;
+  border: solid red;
+  margin-left: 40%;
+}
+.categoriesPet{
+  position: relative;
+  bottom: 34%;
+  left: 130px;
+}
+.petTitile{
+  position: relative;
+  right:30%;
+  top:10%;
+}
+#deleteEdit{
+  position: absolute;
+  bottom:100px;
+  left: 66%;
+}
+#petlabel{
+  /* border: solid red; */
+  width:400px;
+  position: relative;
+  bottom: 280px;
+  margin: 10px;
+}
+#petitionshare{
+  width: 400px;
+  /* border: solid red; */
+  position: relative;
+  bottom: 100px;
+  left: 30%;
 }
 @keyframes App-logo-spin {
   from {

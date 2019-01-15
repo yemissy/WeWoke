@@ -11,20 +11,19 @@ export default function SidebarMenu(props){
           <Menu.Item name ="Home"/>
         </Link>
         <Link to ='/memberhome' >
-          <Menu.Item name ="Activity Feed" active={props.linkActive}/>
+          <Menu.Item name ="Activity Feed" />
         </Link>
-          <Link to ='/memberpetitions'>
-            <Menu.Item name ="Petitions"  active={props.linkActive}/>
+          <Link to ='/memberpetitions' >
+            <Menu.Item name ="Petitions" />
           </Link>
-          <Link to ='orgnization'>
+          <Link to ='/orgnization' >
             <Menu.Item name ="Your Organizations"/>
           </Link>
-          <Link to ='Archive'>
+          <Link to ='/Archive'>
             <Menu.Item name ="Archive"/>
           </Link>
-          <Link to ='/'>
-            {/* <Menu.Item name ="Logout"/> */}
-          </Link>
+          <Link to ='/'></Link>
+          <Link to ='/signuprequest'></Link>
       </Menu>
     </div>
   )

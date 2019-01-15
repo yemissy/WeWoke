@@ -15,14 +15,18 @@ class MemberActivityScreen extends Component{
   constructor(props){
     super(props);
     this.state ={
-      loggedOut: false,
       redirectToLanding: false
     }
     this.logout = this.logout.bind(this);
   }
 
     logout(e){
-      localStorage.removeItem('token');
+      if(this.props.loggedIn==true){
+        localStorage.removeItem('token');
+      }
+      else{
+        window.alert('youre not logged in');
+      }
       console.log('i am being clicked')
       this.setState({
         redirectToLanding: true

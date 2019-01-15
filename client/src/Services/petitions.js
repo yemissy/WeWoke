@@ -1,12 +1,14 @@
 import axios from 'axios';
 
-async function getPetitions(){
-  const result = await axios.get({
-    endpoint:'/petitions/mine',
-    headers:{
+async function getMyPetitions(){
+  console.log('I am trying to get your petitions');
+  const result = await axios({
+    url: '/petitions/mypetitions',
+    headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
   });
+  console.log(result.data)
   return result.data;
 }
 
@@ -25,7 +27,7 @@ async function createPetitions(data){
 }
 
 export {
-  getPetitions,
+  getMyPetitions,
   createPetitions,
   generalGet
 }

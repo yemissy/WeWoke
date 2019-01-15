@@ -9,6 +9,7 @@ import PetitionScreen from './PetitionScreen';
 import Articles from './Articles';
 import SignupModal from './SignupModal';
 import NewPetitionForm from './NewPetitionForm';
+import AccountNeeded from './AccountNeeded';
 
 
 async function getPet(){
@@ -22,7 +23,7 @@ class GuestSceen extends Component {
   constructor(props){
     super(props);
     this.state ={
-      name:'Home',
+      // name:'Home',
       categories: [
         {
           id: 1,
@@ -39,23 +40,14 @@ class GuestSceen extends Component {
           type: 'Support',
           value: 3
         }
-      ],
-      open: true
+      ]
     }
-    // this.handleClick = this.handleClick.bind(this);
   }
 
-  // handleClick(e){
-  //   console.log('i am getting clicked');
-  //   if(this.props.loggedIn ===false){
-  //     return (<SignupModal />)
-  //   }
-  //   else{
-  //     alert('you\'re already loggedin');
-  //   }
-  // }
+
 
   render(){
+
     return(
       <div className='GuestScreen'>
         <Divider vertical></Divider>
@@ -65,10 +57,13 @@ class GuestSceen extends Component {
               categories={this.state.categories}
               petitions={this.props.petitions}
             />
-        </div>
-        <SidebarMenu linkActive={this.props.linkActive}/>
-        {(this.props.loggedIn===false)?
-          <div>
+          </div>
+        <SidebarMenu linkActive={this.props.linkActive}
+          loggedIn={this.props.loggedIn}
+          handleLink={this.props.handleCurrentLink}
+          isCurrentLink={this.props.currentLink}/>
+        {(!this.props.loggedIn) ?
+        <div>
           <SignupModal
           onChange={this.props.onChange}
           onLoginChange={this.props.onLoginChange}

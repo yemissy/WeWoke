@@ -7,14 +7,15 @@ import { getArticles } from './Services/articles';
 import { logIn } from './Services/auth';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import { createPetitions } from './Services/petitions';
+import { getMyPetitions} from './Services/petitions';
 
 
 import LandingPage from './Components/LandingPage';
 import GuestScreen from './Components/GuestScreen';
 import MemberActivityScreen  from './Components/MemberActivityScreen'
 import NewPetitionForm from './Components/NewPetitionForm';
-
-
+import YouCreated from './Components/YourPetitions';
+import AccountNeeded from './Components/AccountNeeded';
 console.log(getMember());
 async function getMembers(){
   const result = await axios.get('/members');
@@ -29,6 +30,7 @@ class App extends Component {
     this.state = {
       articles: [],
       petitions: [],
+      memberpetitions:[],
       createAccount: {
         firstName: '',
         lastName: '',
@@ -97,11 +99,13 @@ class App extends Component {
         password:data
       }
     })
+    await this.myPetitions();
   }
 
   async componentDidMount(){
     await this.getPetitions();
     await this.getArticle();
+    // await this.myPetitions();
   }
 
   async getPetitions(){
@@ -109,6 +113,13 @@ class App extends Component {
     console.log(result);
     this.setState({
       petitions:result
+    })
+  }
+  async myPetitions(){
+    const result = await getMyPetitions();
+    console.log(result);
+    this.setState({
+      memberpetitions: result
     })
   }
 
@@ -158,7 +169,8 @@ class App extends Component {
               handleLogin ={this.handleLogin}
               guestRedirect={this.state.redirectToGuest}
               memberRedirect={this.state.redirectToMember}
-              handleContinue={this.handleContinue}/> }
+              handleContinue={this.handleContinue}
+              loggedIn={this.state.loggedIn}/> }
             />
             <Route  path='/guesthome' render ={()=> <GuestScreen
               thearticles= {this.state.articles}
@@ -174,6 +186,7 @@ class App extends Component {
               handlePetitionSubmit={this.handlePetitionSubmit}
               petitionData={this.state.petitionData}
               loggedIn={this.state.loggedIn}
+              memberRedirect={this.state.redirectToMember}
               /> }
             />
             <Route path='/memberhome' render ={()=> <MemberActivityScreen
@@ -183,6 +196,10 @@ class App extends Component {
               onPetitionInfoChange={this.onPetitionInfoChange}
               handlePetitionSubmit={this.handlePetitionSubmit}
               petitionData={this.state.petitionData}/> }
+            />
+            <Route path='/signuprequest' component ={AccountNeeded}/>
+            <Route path='/memberpetitions' render={() => <YouCreated
+             yourpetitions={this.state.memberpetitions}/>}
             />
 
         </div>

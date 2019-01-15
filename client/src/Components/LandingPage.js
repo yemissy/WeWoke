@@ -20,7 +20,8 @@ export default class LandingPage extends React.Component{
 
   render(){
     if(this.props.guestRedirect) return (<Redirect to='/guesthome' />)
-    if(this.props.memberRedirect) return (<Redirect to='/memberhome' />)
+    if(this.props.memberRedirect && this.props.loggedIn===true) return (<Redirect to='/memberhome' />)
+
     return(
       <div id='landingpage'>
         <div className='holder'>
@@ -36,9 +37,6 @@ export default class LandingPage extends React.Component{
           values ={this.props.values}
           handleSignup={this.props.handleSignup}
         />
-
-
-
 
 
         <LoginForm
