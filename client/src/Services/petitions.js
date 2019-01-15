@@ -26,8 +26,17 @@ async function createPetitions(data){
   return newPetition.data
 }
 
+async function deletepetition(id){
+  const deletedthis = await axios.delete('/petitions/id', id, {
+    headers:{
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  });
+  return deletedthis;
+}
 export {
   getMyPetitions,
   createPetitions,
-  generalGet
+  generalGet,
+  deletepetition
 }

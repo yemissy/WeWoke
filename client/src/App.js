@@ -7,7 +7,7 @@ import { getArticles } from './Services/articles';
 import { logIn } from './Services/auth';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import { createPetitions } from './Services/petitions';
-import { getMyPetitions} from './Services/petitions';
+import { getMyPetitions, deletepetition} from './Services/petitions';
 
 
 import LandingPage from './Components/LandingPage';
@@ -16,18 +16,18 @@ import MemberActivityScreen  from './Components/MemberActivityScreen'
 import NewPetitionForm from './Components/NewPetitionForm';
 import YouCreated from './Components/YourPetitions';
 import AccountNeeded from './Components/AccountNeeded';
-console.log(getMember());
-async function getMembers(){
-  const result = await axios.get('/members');
-  console.log(result.data);
-}
 
- getMembers();
+
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      coverimgs: [
+        {url: './Images/campaigncategory.png'},
+        {url: './Images/fundraisingCategory.jpg'},
+        {url: './Images/supportcategory2.jpeg'}
+      ],
       articles: [],
       petitions: [],
       memberpetitions:[],
@@ -61,6 +61,7 @@ class App extends Component {
     this.handleContinue = this.handleContinue.bind(this);
     this.handlePetitionSubmit = this.handlePetitionSubmit.bind(this);
     this.onPetitionInfoChange = this.onPetitionInfoChange.bind(this);
+    this.deleteThisPetition = this.deleteThisPetition.bind(this);
   }
   onAcctCreateInputChange(e){
     const {name, value} = e.target;
@@ -105,7 +106,7 @@ class App extends Component {
   async componentDidMount(){
     await this.getPetitions();
     await this.getArticle();
-    // await this.myPetitions();
+    await this.deleteThisPetition();
   }
 
   async getPetitions(){
@@ -121,6 +122,12 @@ class App extends Component {
     this.setState({
       memberpetitions: result
     })
+  }
+
+  async deleteThisPetition(){
+    console.log('i am clickable')
+    const deleted = await deletepetition(this.state.memberpetitions);
+    console.log(deleted);
   }
 
   async getArticle(){
@@ -199,7 +206,8 @@ class App extends Component {
             />
             <Route path='/signuprequest' component ={AccountNeeded}/>
             <Route path='/memberpetitions' render={() => <YouCreated
-             yourpetitions={this.state.memberpetitions}/>}
+             yourpetitions={this.state.memberpetitions}
+             delete={this.deleteThisPetition}/>}
             />
 
         </div>

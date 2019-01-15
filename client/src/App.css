@@ -243,31 +243,36 @@
   opacity: 1;
 }
 #yourPettitionnh1{
-  border: solid green;
   width: 600px;
-  /* height: 150px; */
   margin-left: 33%;
+  background-color: black;
+  color: white;
 }
 #petitionContainer{
   background-color: white;
   border:solid black;
   width: 80vw;
-  height:45vw;
+  height:50.5vw;
   margin-left: 16%;
   margin-top: 65px;
   overflow: scroll;
+  position: relative;
+  bottom:20px;
 }
 
 #coverimg{
   width: 450px;
   height: 250px;
-  border: solid red;
   margin-left: 40%;
 }
 .categoriesPet{
   position: relative;
   bottom: 34%;
-  left: 130px;
+  left: 46%;
+  font-size: 40px;
+  background-color: yellow;
+  width: 300px;
+  opacity: 0.7;
 }
 .petTitile{
   position: relative;
@@ -277,7 +282,7 @@
 #deleteEdit{
   position: absolute;
   bottom:100px;
-  left: 66%;
+  left: 64%;
 }
 #petlabel{
   /* border: solid red; */
