@@ -3,6 +3,7 @@ import { Dropdown, Button, Icon, Image, Item, Label } from 'semantic-ui-react';
 
 import profile from '../Images/profilepic1.jpg'
 import NewPetitionForm from './NewPetitionForm';
+import "../Styling/petition.css";
 
 export default function PetitionScreen(props){
   return(

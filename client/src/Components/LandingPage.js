@@ -3,6 +3,7 @@ import { Divider, Button} from 'semantic-ui-react';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import { ReactPlayer } from 'react-player';
 
+import "../Styling/landingPage.css";
 
 import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';

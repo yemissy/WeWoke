@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Styling/App.css';
 import axios from 'axios';
+
+
 import { newMember, getMember } from './Services/member';
 import { generalGet } from './Services/petitions';
 import { getArticles } from './Services/articles';
@@ -16,7 +18,7 @@ import MemberActivityScreen  from './Components/MemberActivityScreen'
 import NewPetitionForm from './Components/NewPetitionForm';
 import YouCreated from './Components/YourPetitions';
 import AccountNeeded from './Components/AccountNeeded';
-
+import Footer from './Components/Footer';
 
 
 class App extends Component {
@@ -65,7 +67,7 @@ class App extends Component {
   }
   onAcctCreateInputChange(e){
     const {name, value} = e.target;
-    this.setState(prevState => ({
+    this.setState(prevState => ({ 
       createAccount: {
         ...prevState.createAccount,
         [name]: value,
@@ -209,7 +211,7 @@ class App extends Component {
              yourpetitions={this.state.memberpetitions}
              delete={this.deleteThisPetition}/>}
             />
-
+            <Footer/>
         </div>
 
       </Router>

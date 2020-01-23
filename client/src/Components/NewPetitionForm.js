@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, Modal, TextArea } from 'semantic-ui-react';
-
+import "../Styling/newPetition.css";
 
 
 export default function PetitionForm(props){

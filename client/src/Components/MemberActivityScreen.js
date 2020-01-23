@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Divider, Image, Button, Item } from 'semantic-ui-react';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
+import "../Styling/memberActivity.css";
+
 import profile from '../Images/profilepic1.jpg'
 import SidebarMenu from './SidebarMenu';
 import Articles from './Articles';

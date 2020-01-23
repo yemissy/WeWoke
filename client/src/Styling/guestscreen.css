@@ -1,0 +1,21 @@
+.GuestScreen{
+  height: 100vh;
+}
+#guestContainer{
+  height: 300px;
+  width: 90%;
+  height:100%;
+  margin-left: 10%;
+  background: url('../Images/childImage6.jpg');
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.9;
+}
+#guestContainer:hover{
+  opacity: 1;
+}
+#secauth{
+  position: absolute;
+  left: 85%;
+  top:10px;
+}

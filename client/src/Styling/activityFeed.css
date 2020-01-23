@@ -1,0 +1,9 @@
+.activity{
+  width: 700px;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  height: 650px;
+  overflow: scroll;
+  background-color: white;
+}

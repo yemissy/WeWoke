@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Divider, Button, Modal} from 'semantic-ui-react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-
+import "../Styling/guestscreen.css";
 
 import SidebarMenu from './SidebarMenu';
 import PetitionScreen from './PetitionScreen';

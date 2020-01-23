@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Icon, Image, Item, Label, Divider } from 'semantic-ui-react';
+import "../Styling/yourPetition.css";
 
 
 import SidebarMenu from './SidebarMenu';

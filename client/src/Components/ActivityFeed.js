@@ -1,6 +1,8 @@
 import React from 'react';
 import { Feed, Icon, Button, Modal, Item, Divider } from 'semantic-ui-react';
 
+import "../Styling/activityFeed.css";
+
 // import CreatePetitionBtn from './CreatePetitionBtn';
 import profile from '../Images/profilepic1.jpg'
 export default function ActivityFeed(props){

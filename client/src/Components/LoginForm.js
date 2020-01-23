@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Input, Button } from 'semantic-ui-react';
 
+import "../Styling/loginform.css";
 
 export default function LoginForm(props){
   return(

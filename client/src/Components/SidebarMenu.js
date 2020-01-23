@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import "../Styling/sideBarmenu.css";
 
 export default function SidebarMenu(props){
   return(

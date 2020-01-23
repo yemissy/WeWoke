@@ -1,0 +1,2 @@
+ERROR: "bundle install" was called with arguments ["rack", "2.0.8"]
+Usage: "bundle install [OPTIONS]"

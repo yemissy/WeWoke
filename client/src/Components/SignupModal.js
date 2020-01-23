@@ -3,6 +3,7 @@ import { Form, Input, Button, Modal, Divider } from 'semantic-ui-react';
 
 import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
+import "../Styling/signupModal.css";
 
 export default function SignUpModal(props){
   return(

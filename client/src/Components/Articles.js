@@ -1,7 +1,7 @@
 import React from 'react';
 import { Item, Divider, Icon, Button} from 'semantic-ui-react';
 
-
+import "../Styling/articles.css";
 export default function Articles(props){
   return(
     <div className="articles">
